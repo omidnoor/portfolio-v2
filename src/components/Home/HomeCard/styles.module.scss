@@ -1,12 +1,41 @@
 .HomeCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-lg);
   &__socials {
-    &__icons {
+    margin-bottom: var(--gap-sm);
+    display: flex;
+    justify-content: center;
+    gap: var(--gap-sm);
+    svg {
+      width: var(--icon-size-md);
+      height: var(--icon-size-md);
+    }
+  }
+  &__intro {
+    width: 100%;
+
+    h2 {
+      font-size: var(--text-size-lg);
       display: flex;
-      gap: var(--gap-sm);
-      svg {
-        width: var(--icon-size-md);
-        height: var(--icon-size-md);
+      justify-content: center;
+      span {
+        color: var(--primary-accent-color);
       }
+    }
+    &__skills {
+      min-height: var(--gap-xxl);
+      margin-top: var(--gap-lg);
+      h1 {
+        font-size: var(--text-size-xxl);
+        display: flex;
+        justify-content: center;
+        color: var(--primary-accent-color);
+      }
+    }
+    p {
+      font-size: var(--text-size-md);
+      margin-top: var(--gap-lg);
     }
   }
 }

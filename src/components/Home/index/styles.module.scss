@@ -1,7 +1,13 @@
 .homeSection {
-  margin: 2rem auto;
+  margin: var(--gap-xxxl) auto;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media only screen and (max-width: 960px) {
+  .homeSection {
+    flex-direction: column-reverse;
+    gap: var(--gap-xxl);
+  }
 }

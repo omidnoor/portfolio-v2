@@ -4,11 +4,26 @@
   --gap-sm: 5px;
   --gap-md: 10px;
   --gap-lg: 20px;
-  --gap-xl: 30px;
+  --gap-xl: 32px;
+  --gap-xxl: 48px;
+  --gap-xxxl: 56px;
   --icon-size-sm: 16px;
   --icon-size-md: 18px;
   --icon-size-lg: 24px;
   --icon-size-xl: 32px;
+  --text-size-sm: 12px;
+  --text-size-md: 16px;
+  --text-size-lg: 20px;
+  --text-size-xl: 24px;
+  --text-size-xxl: 32px;
+  --text-size-xxxl: 36px;
+  --screen-sm: 360px;
+  --screen-md: 640px;
+  --screen-lg: 960px;
+  --screen-xl: 1200px;
+  --screen-xxl: 1400px;
+  --screen-xxxl: 1600px;
+
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
@@ -16,6 +31,8 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+
+  --primary-accent-color: #efffa6;
 
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,

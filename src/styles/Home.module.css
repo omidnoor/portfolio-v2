@@ -5,6 +5,8 @@
   align-items: center;
   padding: 4rem 6rem;
   min-height: 100vh;
+  max-width: var(--max-width);
+  margin: 0 auto;
 }
 
 .description {
