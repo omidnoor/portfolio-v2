@@ -33,7 +33,7 @@
   --background-end-rgb: 255, 255, 255;
 
   --primary-accent-color: #efffa6;
-
+  --secondary-accent-color: #ffc400;
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
     #16abff33 0deg,

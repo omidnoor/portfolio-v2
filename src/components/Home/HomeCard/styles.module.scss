@@ -38,4 +38,10 @@
       margin-top: var(--gap-lg);
     }
   }
+  &__actions {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: var(--gap-xl);
+  }
 }

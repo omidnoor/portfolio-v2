@@ -21,7 +21,7 @@ export default function Home() {
         <Header />
         <HomeSection />
         <AboutMe />
-        <div className={styles.description}>
+        {/* <div className={styles.description}>
           <p>
             Get started by editing&nbsp;
             <code className={styles.code}>src/pages/index.js</code>
@@ -50,7 +50,7 @@ export default function Home() {
             height={37}
             priority
           />
-        </div>
+        </div> */}
 
         <div className={styles.grid}>
           <a

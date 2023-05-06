@@ -6,6 +6,7 @@ import { Component } from "react";
 
 import styles from "./styles.module.scss";
 import AnimatedTexts from "@/components/AnimatedText";
+import ButtonUI from "@/components/UI/Button";
 
 export default function HomeCard() {
   return (
@@ -27,6 +28,10 @@ export default function HomeCard() {
           </h1>
         </div>
         <p>Knock of building with front end and backend operations</p>
+      </div>
+      <div className={styles.HomeCard__actions}>
+        <ButtonUI type="primary">Hire Me</ButtonUI>
+        <ButtonUI type="secondary">Resume</ButtonUI>
       </div>
     </div>
   );
