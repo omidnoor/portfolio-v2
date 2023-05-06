@@ -1,0 +1,12 @@
+.HomeCard {
+  &__socials {
+    &__icons {
+      display: flex;
+      gap: var(--gap-sm);
+      svg {
+        width: var(--icon-size-md);
+        height: var(--icon-size-md);
+      }
+    }
+  }
+}

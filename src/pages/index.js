@@ -3,6 +3,8 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import Header from "@/components/Header";
+import AboutMe from "@/components/AboutMe/index";
+import HomeSection from "@/components/Home/index";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,6 +19,8 @@ export default function Home() {
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
         <Header />
+        <HomeSection />
+        <AboutMe />
         <div className={styles.description}>
           <p>
             Get started by editing&nbsp;
