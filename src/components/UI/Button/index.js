@@ -9,11 +9,7 @@ export default function ButtonUI({ children, type }) {
         <Button
           variant="contained"
           color="primary"
-          style={{
-            borderRadius: "50px",
-            background: "#ffc400",
-            color: "rgba(1, 65, 255)",
-          }}
+          className={`${styles.btn} ${styles.btnContained}`}
         >
           {children}
         </Button>
@@ -21,11 +17,7 @@ export default function ButtonUI({ children, type }) {
         <Button
           variant="outlined"
           color="primary"
-          style={{
-            borderRadius: "50px",
-            borderColor: "#ffc400",
-            color: "#fff",
-          }}
+          className={`${styles.btnOutlined} ${styles.btn} `}
         >
           {children}
         </Button>

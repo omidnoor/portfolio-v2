@@ -1,8 +1,12 @@
 .homeImage {
-  border-radius: 50%;
-  border: 3px solid #fff;
-  width: 200px;
+  // border-radius: 50%;
+  z-index: 20;
   img {
-    width: 100%;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    z-index: 10;
   }
 }

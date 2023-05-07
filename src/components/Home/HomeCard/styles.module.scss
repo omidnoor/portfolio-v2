@@ -1,3 +1,5 @@
+@import "@/styles/global.scss";
+
 .HomeCard {
   display: flex;
   flex-direction: column;
@@ -24,24 +26,38 @@
       }
     }
     &__skills {
-      min-height: var(--gap-xxl);
+      min-height: var(--m-xxxl);
       margin-top: var(--gap-lg);
       h1 {
         font-size: var(--text-size-xxl);
         display: flex;
         justify-content: center;
         color: var(--primary-accent-color);
+        @media (max-width: $bp-sm) {
+          font-size: var(--text-size-xxl);
+        }
       }
     }
     p {
       font-size: var(--text-size-md);
       margin-top: var(--gap-lg);
+      @media (max-width: $bp-sm) {
+        text-align: center;
+      }
     }
   }
   &__actions {
+    margin-top: var(--gap-xl);
     width: 100%;
     display: flex;
     justify-content: center;
     gap: var(--gap-xl);
+    @media (max-width: $bp-sm) {
+      font-size: 14px;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: var(--gap-md);
+    }
   }
 }

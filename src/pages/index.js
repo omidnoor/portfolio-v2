@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.css";
+import styles from "@/styles/Home.module.scss";
 import Header from "@/components/Header";
 import AboutMe from "@/components/AboutMe/index";
 import HomeSection from "@/components/Home/index";
@@ -39,9 +39,9 @@ export default function Home() {
               />
             </a>
           </div>
-        </div>
+        </div> */}
 
-        <div className={styles.center}>
+        {/* <div className={styles.center}>
           <Image
             className={styles.logo}
             src="/next.svg"
@@ -51,7 +51,7 @@ export default function Home() {
             priority
           />
         </div> */}
-
+        {/* 
         <div className={styles.grid}>
           <a
             href=""
@@ -109,7 +109,7 @@ export default function Home() {
               with&nbsp;Vercel.
             </p>
           </a>
-        </div>
+        </div> */}
       </main>
     </>
   );

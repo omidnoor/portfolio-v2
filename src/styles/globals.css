@@ -7,6 +7,18 @@
   --gap-xl: 32px;
   --gap-xxl: 48px;
   --gap-xxxl: 56px;
+  --m-sm: 5px;
+  --m-md: 10px;
+  --m-lg: 20px;
+  --m-xl: 32px;
+  --m-xxl: 48px;
+  --m-xxxl: 60px;
+  --p-sm: 5px;
+  --p-md: 10px;
+  --p-lg: 20px;
+  --p-xl: 32px;
+  --p-xxl: 48px;
+  --p-xxxl: 64px;
   --icon-size-sm: 16px;
   --icon-size-md: 18px;
   --icon-size-lg: 24px;

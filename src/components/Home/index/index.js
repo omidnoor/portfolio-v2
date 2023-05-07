@@ -4,7 +4,7 @@ import styles from "./styles.module.scss";
 
 export default function HomeSection() {
   return (
-    <div className={styles.homeSection}>
+    <div className={`${styles.homeSection} ${styles.center}`}>
       <HomeCard />
       <HomeImage />
     </div>
