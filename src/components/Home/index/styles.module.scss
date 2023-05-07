@@ -1,7 +1,7 @@
+@import "@/styles/global.scss";
 .homeSection {
-  // padding-top: var(--p-xxxl);
+  padding-bottom: 200px;
   height: 100vh;
-  // margin: var(--m-xxxl) auto;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -11,34 +11,6 @@
     gap: var(--gap-xxl);
     justify-content: center;
   }
-}
-// .center {
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   position: relative;
-// }
-
-.center::before {
-  background: var(--secondary-glow);
-  border-radius: 50%;
-  width: 380px;
-  height: 380px;
-  // margin-left: -400px;
-}
-
-.center::after {
-  background: var(--primary-glow);
-  width: 380px;
-  height: 380px;
-  z-index: -1;
-}
-
-.center::before,
-.center::after {
-  content: "";
-  left: 57%;
-  position: absolute;
-  filter: blur(45px);
-  transform: translateZ(0);
+  // color: white;
+  // clip-path: polygon(0 0, 100% 0, 100% calc(100% - 50px), 0 100%);
 }

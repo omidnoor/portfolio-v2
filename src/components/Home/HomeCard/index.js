@@ -27,10 +27,10 @@ export default function HomeCard() {
             <AnimatedTexts text1="Next/React Dev" text2="Cross Platform Dev" />
           </h1>
         </div>
-        <p>Knock of building with front end and backend operations</p>
+        <p>Knack of building with front end and backend operations</p>
       </div>
       <div className={styles.HomeCard__actions}>
-        <ButtonUI type="primary">Hire Me</ButtonUI>
+        <ButtonUI type="primary">let's talk</ButtonUI>
         <ButtonUI type="secondary">Resume</ButtonUI>
       </div>
     </div>

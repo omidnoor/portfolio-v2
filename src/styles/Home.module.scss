@@ -1,7 +1,6 @@
 @import "@/styles/global.scss";
 .main {
   @include responsive-font(14px, 18px, 320px, 1200px);
-  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

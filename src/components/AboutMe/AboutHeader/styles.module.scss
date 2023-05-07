@@ -1,0 +1,15 @@
+@import "@/styles/global.scss";
+
+.aboutHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: var(--gap-lg);
+  h2 {
+    font-size: $h-lg;
+  }
+  h3 {
+    font-size: $h-md;
+  }
+}

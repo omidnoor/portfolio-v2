@@ -1,0 +1,32 @@
+@import "@/styles/global.scss";
+
+.aboutMe {
+  height: 100vh;
+  width: 100%;
+
+  position: relative;
+}
+
+.blueGlow::before {
+  background: var(--secondary-glow);
+  width: 380px;
+  height: 380px;
+  // margin-left: -400px;
+}
+
+.blueGlow::after {
+  background: var(--secondary-glow);
+  width: 380px;
+  height: 380px;
+  z-index: -1;
+}
+
+.blueGlow::before,
+.blueGlow::after {
+  background: var(--secondary-glow);
+  left: 25%;
+  top: 100vh;
+  position: absolute;
+  filter: blur(45px);
+  transform: translateZ(0);
+}

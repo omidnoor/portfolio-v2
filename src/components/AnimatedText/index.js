@@ -20,11 +20,20 @@ const MagicWriter = ({ text1, icon1, text2, icon2 }) => {
       }, 2000);
     }
   }, [textToShow, textIndex]);
-
+  // console.log(textIndex, textToShow, texts[textIndex]);
   return (
     <span>
       {textToShow}
-      {/* {textIndex === 0 && textToShow !== "" ? <TbBrandNextjs /> : ""} */}
+      {textToShow === texts[0] ? (
+        <>
+          <TbBrandNextjs
+            style={{ color: "rgba(1, 200, 255)", height: "30px" }}
+          />
+          <FaReact style={{ color: "rgba(1, 200, 255)", height: "30px" }} />
+        </>
+      ) : (
+        ""
+      )}
     </span>
   );
 };
