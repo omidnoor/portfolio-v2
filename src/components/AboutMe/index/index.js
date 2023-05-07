@@ -1,3 +1,4 @@
+import BackgroundAnimation from "@/components/BgAnimation";
 import AboutCard from "../AboutCard";
 import AboutHeader from "../AboutHeader";
 import AboutImage from "../AboutImage";
@@ -11,6 +12,7 @@ export default function AboutMe() {
       <AboutCard />
       <AboutImage />
       <OverLay />
+      <BackgroundAnimation />
     </div>
   );
 }
