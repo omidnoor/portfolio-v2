@@ -3,6 +3,7 @@ import AboutCard from "../AboutCard";
 import AboutHeader from "../AboutHeader";
 import AboutImage from "../AboutImage";
 import OverLay from "../OverLay";
+import ScrollingDiv from "../../UI/ScrollingDiv";
 import styles from "./styles.module.scss";
 
 export default function AboutMe() {
@@ -11,8 +12,7 @@ export default function AboutMe() {
       <AboutHeader />
       <AboutCard />
       <AboutImage />
-      <OverLay />
-      <BackgroundAnimation />
+      <ScrollingDiv></ScrollingDiv>
     </div>
   );
 }
