@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import styles from "./styles.module.scss";
 
-export default function ScrollingDiv({
+export default function WheelDiv({
   children,
   animationInProgress,
   setAnimationInProgress,
 }) {
   const [circleSize, setCircleSize] = useState(0);
+  const [circleHeight, setCircleHeight] = useState(0);
   const [containerSize, setContainerSize] = useState({
     width: 0,
     height: 0,
@@ -20,34 +21,33 @@ export default function ScrollingDiv({
       containerRect.bottom,
       windowHeight - containerRect.top,
     );
-    // console.log(containerVisibleHeight);
-    // console.log(circleSize, containerVisibleHeight < containerSize.height / 2);
-    const maxRadius =
-      Math.sqrt(
-        containerSize.width * containerSize.width +
-          containerSize.height * containerSize.height,
-      ) / 2;
-
-    if (containerVisibleHeight < containerSize.height / 2) {
-      setCircleSize(20);
+    setCircleSize(20);
+    // console.log(containerVisibleHeight > containerSize.height - 0.1);
+    if (containerVisibleHeight > containerSize.height - 0.1) {
+      animateCircle();
     } else {
-      const newSize = Math.min(
-        ((containerVisibleHeight * 2) / containerSize.height - 1) * maxRadius,
-        maxRadius,
-      );
-      setCircleSize(newSize);
-    }
-    if (circleSize === maxRadius) {
-      // handleWheel();
-      // setCircleSize(maxRadius);
-      // setAnimationInProgress(true);
+      setAnimationInProgress(false);
     }
   };
 
+  console.log(circleHeight);
   const handleWheel = (e) => {
     if (animationInProgress) {
       e.preventDefault();
-      console.log(e);
+
+      setCircleHeight((prev) => {
+        const newCircleHeight = prev + e.deltaY / 50;
+
+        if (newCircleHeight <= 20 && newCircleHeight >= 0) {
+          return newCircleHeight;
+        } else if (newCircleHeight > 20) {
+          return 20;
+        } else if (newCircleHeight < 0) {
+          return 0;
+        }
+
+        return prev;
+      });
     }
   };
 
@@ -67,6 +67,11 @@ export default function ScrollingDiv({
     }
   }, []);
 
+  const animateCircle = () => {
+    setAnimationInProgress(true);
+    handleWheel();
+  };
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -76,7 +81,11 @@ export default function ScrollingDiv({
     <div className={styles.container} id="container">
       <div
         className={styles.scrollingDiv}
-        style={{ width: `${2 * circleSize}px`, height: `${2 * circleSize}px` }}
+        style={{
+          width: `${2 * circleSize}px`,
+          height: `${2 * circleSize}px`,
+          top: `${animationInProgress ? 50 - circleHeight : "50"}%`,
+        }}
       >
         {children}
       </div>

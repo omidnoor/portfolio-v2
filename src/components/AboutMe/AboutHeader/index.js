@@ -1,6 +1,15 @@
+import { useState } from "react";
 import styles from "./styles.module.scss";
 
 export default function AboutHeader() {
+  const [visible, setVisible] = useState(false);
+  const [containerSize, setContainerSize] = useState({
+    width: 0,
+    height: 0,
+  });
+
+  const handleScroll = (e) => {};
+
   return (
     <div className={styles.aboutHeader}>
       <h2>About Me</h2>

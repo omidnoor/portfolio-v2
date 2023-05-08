@@ -1,10 +1,16 @@
 @import "@/styles/global.scss";
 
 .aboutHeader {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  // height: 100%;
+  padding-top: 10rem;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+  color: #000;
   gap: var(--gap-lg);
   h2 {
     font-size: $h-lg;
