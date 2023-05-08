@@ -8,11 +8,13 @@ import styles from "./styles.module.scss";
 
 export default function AboutMe() {
   return (
-    <div className={`${styles.aboutMe} `}>
+    <div className={`${styles.aboutMe}`}>
       <AboutHeader />
-      <AboutCard />
+
       <AboutImage />
-      <ScrollingDiv></ScrollingDiv>
+      <ScrollingDiv>
+        <AboutCard />
+      </ScrollingDiv>
     </div>
   );
 }

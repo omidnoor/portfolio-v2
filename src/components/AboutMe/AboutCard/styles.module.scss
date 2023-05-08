@@ -1,0 +1,9 @@
+.aboutCard {
+  overflow: auto;
+  background-color: #ffffff00;
+  color: #000;
+  padding: 2rem 6rem;
+  p {
+    font-size: var(--text-size-lg);
+  }
+}

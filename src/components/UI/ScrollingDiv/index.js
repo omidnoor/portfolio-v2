@@ -16,18 +16,22 @@ export default function ScrollingDiv({ children }) {
       containerRect.bottom,
       windowHeight - containerRect.top,
     );
-
+    console.log(containerVisibleHeight);
     const maxRadius =
       Math.sqrt(
         containerSize.width * containerSize.width +
           containerSize.height * containerSize.height,
       ) / 2;
 
-    const newSize = Math.min(
-      (containerVisibleHeight / containerSize.height) * maxRadius,
-      maxRadius,
-    );
-    setCircleSize(newSize);
+    if (containerVisibleHeight < containerSize.height / 2) {
+      setCircleSize(20);
+    } else {
+      const newSize = Math.min(
+        ((containerVisibleHeight * 2) / containerSize.height - 1) * maxRadius,
+        maxRadius,
+      );
+      setCircleSize(newSize);
+    }
   };
 
   useEffect(() => {
